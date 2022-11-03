@@ -1,0 +1,15 @@
+{
+  "mfe_official_name": "mymfe",
+  "mfe_app_name": "{{ cookiecutter.mfe_official_name }}",
+  "mfe_app_port": "1234",
+  "mfe_app_repository": "https://github.com/openedx/frontend-app-{{ cookiecutter.mfe_official_name }}",
+  "mfe_app_version": "",
+  "exists_in_plugin":"",
+  "existing_config_to_override":"{% if cookiecutter.exists_in_plugin %}{{(cookiecutter.exists_in_plugin ~ '_' ~ cookiecutter.mfe_app_name)|upper|replace('-', '_') }}_MFE_APP{% endif %}",
+  "plugin_name": "mfe-{{ cookiecutter.mfe_official_name }}",
+  "package_name": "tutor-contrib-mfe-{{ cookiecutter.mfe_official_name }}",
+  "module_name": "tutormfe_{{ cookiecutter.mfe_official_name.lower().replace('-', '_') }}",
+  "git_repo": "https://github.com/myusername/{{cookiecutter.package_name }}",
+  "author": "John Doe",
+  "license": "AGPLv3"
+}
